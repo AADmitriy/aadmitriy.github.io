@@ -1,0 +1,452 @@
+/* {
+    border: 2px black;
+}*/
+@font-face {
+    font-family: 'Roboto';
+    src:
+      local('Roboto Regular'),
+      url('fonts/Roboto-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src:
+      local('Roboto Bold'),
+      url('fonts/Roboto-Bold.ttf');
+    font-weight: 700;
+}
+
+:root {
+    --clr-neutral-800: hsl(234, 29%, 20%);
+    --clr-neutral-700: hsl(235, 18%, 26%);
+    --clr-neutral-400: hsl(231, 7%, 60%);
+    --clr-neutral-300: hsl(0, 8%, 93%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+
+    --clr-green-400: hsl(128, 92%, 60%);
+    --clr-blue-400: hsl(185, 95%, 60%);
+    --clr-yellow-400: hsl(66, 95%, 60%);
+
+    --clr-green-500: hsl(128, 92%, 50%);
+    --clr-blue-500: hsl(185, 95%, 50%);
+    --clr-yellow-500: hsl(66, 95%, 50%);
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    --fs-300: .925rem;
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-700: 1.75rem;
+    --fs-900: 2rem;
+}
+
+* {
+    margin: 0;
+    /* outline: solid 1px red; */
+}
+
+html{
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: Roboto;
+    font-weight: 400;
+    background-color: var(--clr-neutral-300);
+    margin-bottom: 90px;
+}
+
+.background_decorative_img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 350px;
+    background-image: url("media/mountains2.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom 25% center;
+    overflow: hidden;
+}
+
+@media (max-width: 1000px) {
+    .background_decorative_img {
+        background-image: url("media/mountains3.webp");
+        background-position: top;
+    }
+}
+@media (max-width: 560px) {
+    .background_decorative_img {
+        display: none;
+    }
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--clr-neutral-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*================== navbar =======================*/
+nav a {
+    text-decoration: none;
+    color: var(--clr-neutral-800);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-bold);
+    margin: 0 1.5rem;
+}
+
+nav {
+    width: clamp(60%, 40rem, 100%);;
+    margin: auto;
+    padding: 1rem 0;
+    background-color: var(--clr-neutral-100);
+    position: relative;
+    z-index: 2;
+}
+
+nav .menu_toggle {
+    display: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+    nav .menu_toggle svg {
+        height: 2rem;
+    }
+
+nav .scrollLinks {
+    display: flex;
+    justify-content: center
+}
+
+@media (max-width: 420px) {
+    nav {
+        padding: 0;
+    }
+    nav .menu_toggle {
+        display: block;
+    }
+    nav .scrollLinks {
+        background: white;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: .75rem;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 .5rem;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+    .scrollLinks.unfolded {
+        max-height: 100px;
+        padding: .5rem;
+    }
+    nav a {
+        margin: 0;
+    }
+}
+
+
+/*================== short info on top =======================*/
+.main_container {
+    width: clamp(60%, 40rem, 95%);
+    height: 100%;
+    margin: 5rem auto 0 auto;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.short_info {
+    padding: 1rem;
+    background-color: var(--clr-neutral-100);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    grid-template-areas:
+        "img   img  name  name  name"
+        "img   img  name  name  name"
+        "img   img  btns  btns  btns"
+        "img   img  table table table"
+        "links links table table table"
+        "links links table table table"
+        "....  .... table table table"
+        "....  .... table table table"
+        "....  .... table table table"
+        "....  .... table table table"
+}
+
+@media (max-width: 560px) {
+    .main_container {
+        margin: 0;
+        width: 100%;
+        background-image: url(media/mountains2.webp);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: bottom 25% center;
+        overflow: hidden;
+    }
+
+    .short_info {
+        grid-template-areas:
+        "... img img img ..."
+        " name name name name  name"
+        "btns btns btns btns btns"
+        "... links links links ...";
+
+        gap: 1rem;
+        background: transparent;
+        backdrop-filter: blur(2px);
+        color: white;
+        
+    }
+    table.my_info {
+        display: none;
+    }
+    .links svg {
+        fill: white;
+    }
+
+    .name_job_buttons {
+        text-align: center;
+    }
+
+    .main_buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1700px) {
+    .background_decorative_img {
+        height: 450px
+    }
+
+    nav a {
+        font-size: var(--fs-500);
+        margin: 0 2.5rem;
+    }
+
+    .short_info {
+        font-size: 1.3rem;
+        grid-template-areas:
+        "img   img  name  name  name"
+        "img   img  name  name  name"
+        "img   img  btns  btns  btns"
+        "img   img  table table table"
+        "links links table table table"
+        "links links table table table"
+        "....  .... table table table";
+    }
+}
+
+.image_container {
+    grid-area: img;
+    aspect-ratio: 1/1;
+    width: 50%;
+    margin: auto;
+    border: solid 2px black;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+    .image_container img {
+        max-width: 100%;
+    }
+
+.links {
+    margin-top: 0.5rem;
+    grid-area: links;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.links svg {
+    width: var(--fs-700);
+}
+
+.name_job_buttons {
+    grid-area: name;
+}
+.name_container {
+    font-size: var(--fs-900);
+    font-weight: var(--fw-bold);
+}
+
+.job_title,
+.main_buttons button {
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
+}
+
+.job_title {
+    text-transform: uppercase;
+}
+
+.main_buttons {
+    grid-area: btns;
+}
+
+.main_buttons button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--clr-neutral-100);
+}
+
+.main_buttons .down_cv {
+    background-color: var(--clr-green-400);
+}
+
+.main_buttons .contact {
+    background-color: var(--clr-blue-400);
+}
+
+.additional_info {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--fs-300);
+}
+
+table.my_info {
+    grid-area: table;
+    text-align: left;
+    font-weight: var(--fw-regular);
+    border-collapse: collapse;
+}
+    .my_info th {
+        font-weight: var(--fw-regular);
+        word-wrap: break-word;
+    }
+    .my_info th:nth-of-type(1) {
+        font-weight: var(--fw-bold);
+    }
+/*==================*/
+
+/*================== additional info =======================*/
+.additional_content {
+    width: clamp(60%, 40rem, 95%);;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.skill_sets {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill_set {
+    width: 45%;
+    margin-top: 1.5rem;
+}
+
+.skill_set h3 {
+    margin-bottom: .5rem;
+}
+
+@media (max-width: 760px) {
+    .skill_sets {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .skill_set {
+        margin-top: 0;
+        width: 100%;
+    }
+}
+
+.skills_array {
+    background-color: var(--clr-neutral-100);
+    padding: 1rem;
+}
+
+.slider {
+    width: 100%;
+    background: linear-gradient(to right, var(--clr-blue-400) 0%, var(--clr-blue-400) 50%, #fff 50%, #fff 100%);
+    border-radius: 8px;
+    height: 5px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background: var(--clr-blue-500);
+}
+
+.slider.green::-webkit-slider-thumb {
+    background: var(--clr-green-500);
+}
+
+.slider.yellow::-webkit-slider-thumb {
+    background: var(--clr-yellow-500);
+}
+
+.education_info div {
+    margin-top: .5rem;
+}
+
+.education {
+    background-color: var(--clr-neutral-100);
+    padding: 1rem;
+    line-height: 1.4;
+}
+    .location {
+        font-size: var(--fs-500);
+        font-weight: var(--fw-bold);
+    }
+    .period {
+        font-size: var(--fs-400);
+    }
+    .faculty {
+        font-size: var(--fs-400);
+    }
+    .speciality {
+        font-size: var(--fs-400);
+    }
+
+.project {
+    background-color: var(--clr-neutral-100);
+    padding: 1rem;
+    margin: .5rem 0 .5rem 0;
+    text-decoration: none;
+    color: black;
+}
+
+.project div {
+    margin-top: .5rem;
+    line-height: 1.4;
+}
+
+.project img {
+    max-width: 100%;
+}
+
+.project h3 {
+    margin-bottom: .35rem;
+}
