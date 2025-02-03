@@ -24,7 +24,8 @@
     </script>
     <title>daheionok</title>
 </head>
-<body>
+<body onload="hide_load_animation()">
+    <div class="load_animation"></div>
     <div class="background_decorative_img"></div>
     <nav>
         <button class="menu_toggle" onclick="toggleLinksDisplay()">
@@ -61,9 +62,9 @@
                 </a>
             </div>
             <div class="name_job_buttons">
-                <div class="name_container">
+                <h1 class="name_container">
                     Aheionok Dmytro
-                </div>
+                </h1>
                 <div class="job_title">
                     Backend Developer
                 </div>
@@ -257,6 +258,13 @@
             slider.style.background = 'linear-gradient(to right, ' + clr_yellow + ' 0%, ' + clr_yellow
                                        + ' ' + value + '%, ' + clr_neutral + ' ' + value + '%, ' 
                                        + clr_neutral + ' 100%)';
+        }
+    </script>
+    <script>
+        function hide_load_animation() {
+            let load_animation = document.querySelector('.load_animation')
+            // load_animation.style.display = 'none'
+            load_animation.classList.add('hidden')
         }
     </script>
 </body>
