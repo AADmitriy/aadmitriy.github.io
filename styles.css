@@ -464,8 +464,11 @@ h2 {
     background: var(--clr-yellow-500);
 }
 
-.education_info div {
+.education_info {
     margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .65rem;
 }
 
 .education {
