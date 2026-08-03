@@ -215,7 +215,7 @@ nav .scrollLinks {
     }
 
     .scrollLinks.unfolded {
-        max-height: 100px;
+        max-height: 120px;
         padding: .5rem;
     }
 
@@ -295,6 +295,10 @@ nav .scrollLinks {
         display: flex;
         justify-content: center;
         gap: 1.5rem;
+    }
+
+    nav a {
+        margin: 0.75rem;
     }
 }
 

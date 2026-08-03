@@ -18,6 +18,9 @@
         function scrollToProjects() {
             document.querySelector("#projects_header").scrollIntoView({ block: "start", behavior: "smooth" });
         }
+        function scrollToTeamProjects() {
+            document.querySelector("#team_projects_header").scrollIntoView({ block: "start", behavior: "smooth" });
+        }
         function toggleLinksDisplay() {
             var element = document.querySelector(".scrollLinks");
             element.classList.toggle("unfolded");
@@ -39,6 +42,7 @@
             <a href="#" onclick="scrollToSkills()">My skill sets</a>
             <a href="#" onclick="scrollToEducation()">Education</a>
             <a href="#" onclick="scrollToProjects()">Pet projects</a>
+            <a href="#" onclick="scrollToTeamProjects()">Team projects</a>
         </div>
     </nav>
     <div class="main_container">
@@ -182,7 +186,7 @@
                 <p class="speciality">Speciality: Software Engineering</p>
             </div>
             <div class="education">
-                <p class="location">Data Analytics and Quality mentoring program</p>
+                <p class="location">EPAM, Data Analytics and Quality mentoring program</p>
                 <p class="period">25 June 2025 — 6 October 2025</p>
                 <p class="speciality">
                     Program Included: GIT, Python, Cloud Computing. Azure, Databricks,
@@ -190,7 +194,7 @@
                 </p>
             </div>
             <div class="education">
-                <p class="location">Data Analytics / Quality Engineering program</p>
+                <p class="location">EPAM, Data Analytics / Quality Engineering program</p>
                 <p class="period">13 March 2025 — 02 June 2025</p>
                 <p class="speciality">
                     Program Included: GIT, Python, Data Modeling, DML, DDL, DCL, TCL,
@@ -399,11 +403,320 @@
                 </div>
             </div>
         </div>
+        <div class="team_projects">
+            <h2 id="team_projects_header">Team projects</h2>
+            <div class="project">
+                <h3>Chronus - Calendar & Event Management Platform</h3>
+                <a href="https://github.com/AADmitriy/Chronus-Calendar">Link to github source</a>
+                <div class="carousel-container">
+                    <div class="carousel-viewpoint">
+                        <div class="carousel-slide active" id="slide-1">
+                            <img class="slide__background" src="media/chronus/chronus_month_view2.webp">
+                            <img class="slide__image" src="media/chronus/chronus_month_view2.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-2">
+                            <img class="slide__background" src="media/chronus/chronus_month_view.webp">
+                            <img class="slide__image" src="media/chronus/chronus_month_view.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-3">
+                            <img class="slide__background" src="media/chronus/chronus_week_view.webp">
+                            <img class="slide__image" src="media/chronus/chronus_week_view.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-4">
+                            <img class="slide__background" src="media/chronus/chronus_year_view.webp">
+                            <img class="slide__image" src="media/chronus/chronus_year_view.webp">
+                        </div>
+                        <div class="carousel-slide" id="slide-5">
+                            <img class="slide__background" src="media/chronus/chronus_home_page.webp">
+                            <img class="slide__image" src="media/chronus/chronus_home_page.webp">
+                        </div>
+                        <div class="carousel-slide" id="slide-6">
+                            <img class="slide__background" src="media/chronus/chronus_event_creation_popup.webp">
+                            <img class="slide__image" src="media/chronus/chronus_event_creation_popup.webp">
+                        </div>
+                        <div class="carousel-slide" id="slide-7">
+                            <img class="slide__background" src="media/chronus/chronus_event_creation_page.webp">
+                            <img class="slide__image" src="media/chronus/chronus_event_creation_page.webp">
+                        </div>
+                        <div class="carousel-slide" id="slide-8">
+                            <img class="slide__background" src="media/chronus/chronus_user_page.webp">
+                            <img class="slide__image" src="media/chronus/chronus_user_page.webp">
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <a class="nav-dot active"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                    </div>
+                    <div class="carousel-buttons">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/>
+                            </svg>
+                        </button>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="project__description">
+                    Chronus is a comprehensive calendar and event management platform.
+                    <br>
+                    Features of this site:
+                    <ul class="site_features">
+                        <li>Multiple Calendar Views: Day, Week, Month, and Year perspectives</li>
+                        <li>Event Management: Create, edit, delete, and share events</li>
+                        <li>Time Management: Time slots, reminders, and deadlines</li>
+                        <li>Profile Management: Customizable user profiles</li>
+                    </ul>
+                    <br>
+                    The project was carried out by three developers. My part of the job was:
+                    <ul class="site_features">
+                        <li>Developing day, week and month view components</li>
+                        <li>Developing event creation pop-up and page</li>
+                        <li>Connecting part of a UI interface to backend API endpoints</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project">
+                <h3>uEvent - Event management platform</h3>
+                <!-- <a href="https://github.com/AADmitriy/django-ecommerce-site">Link to github source</a> -->
+                <div class="carousel-container">
+                    <div class="carousel-viewpoint">
+                        <div class="carousel-slide active" id="slide-1">
+                            <img class="slide__background" src="media/event_site/event_site_home_page.webp">
+                            <img class="slide__image" src="media/event_site/event_site_home_page.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-2">
+                            <img class="slide__background" src="media/event_site/event_site_event_page.webp">
+                            <img class="slide__image" src="media/event_site/event_site_event_page.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-3">
+                            <img class="slide__background" src="media/event_site/event_site_event_page2.webp">
+                            <img class="slide__image" src="media/event_site/event_site_event_page2.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-4">
+                            <img class="slide__background" src="media/event_site/event_site_signup.webp">
+                            <img class="slide__image" src="media/event_site/event_site_signup.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-5">
+                            <img class="slide__background" src="media/event_site/event_site_logout.webp">
+                            <img class="slide__image" src="media/event_site/event_site_logout.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-6">
+                            <img class="slide__background" src="media/event_site/event_site_user_events.webp">
+                            <img class="slide__image" src="media/event_site/event_site_user_events.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-7">
+                            <img class="slide__background" src="media/event_site/event_site_create_event_page.webp">
+                            <img class="slide__image" src="media/event_site/event_site_create_event_page.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-8">
+                            <img class="slide__background" src="media/event_site/event_site_create_event_page2.webp">
+                            <img class="slide__image" src="media/event_site/event_site_create_event_page2.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-9">
+                            <img class="slide__background" src="media/event_site/event_site_company_form.webp">
+                            <img class="slide__image" src="media/event_site/event_site_company_form.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-10">
+                            <img class="slide__background" src="media/event_site/event_site_company_info.webp">
+                            <img class="slide__image" src="media/event_site/event_site_company_info.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-11">
+                            <img class="slide__background" src="media/event_site/event_site_notifications.webp">
+                            <img class="slide__image" src="media/event_site/event_site_notifications.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-12">
+                            <img class="slide__background" src="media/event_site/event_site_profile_settings.webp">
+                            <img class="slide__image" src="media/event_site/event_site_profile_settings.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-13">
+                            <img class="slide__background" src="media/event_site/event_site_admin_organisations.webp">
+                            <img class="slide__image" src="media/event_site/event_site_admin_organisations.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-14">
+                            <img class="slide__background" src="media/event_site/event_site_admin_tickets.webp">
+                            <img class="slide__image" src="media/event_site/event_site_admin_tickets.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-15">
+                            <img class="slide__background" src="media/event_site/event_site_admin_users.webp">
+                            <img class="slide__image" src="media/event_site/event_site_admin_users.webp">
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <a class="nav-dot active"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                    </div>
+                    <div class="carousel-buttons">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/>
+                            </svg>
+                        </button>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="project__description">
+                    uEvent is the event management platform.
+                    <br>
+                    Users of this site can:
+                    <ul class="site_features">
+                        <li>Search for various events using filters</li>
+                        <li>Comment and subscribe to events</li>
+                        <li>Create events and organizations</li>
+                        <li>Use Monobank payment system to buy tickets</li>
+                    </ul>
+                    Admins of this site can:
+                    <ul class="site_features">
+                        <li>Verify organizations</li>
+                        <li>Ban events and organizations</li>
+                        <li>Create new event topics and categories</li>
+                        <li>Monitor ticket sales</li>
+                    </ul>
+                    <br>
+                    The project was carried out by three developers. My part of the job was:
+                    <ul class="site_features">
+                        <li>Developing page for event creation and modification</li>
+                        <li>Developing signup, login and logout pop-ups</li>
+                        <li>Connecting part of a UI interface to backend API endpoints</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project">
+                <h3>Vincy - Photo Editor Site</h3>
+                <!-- <a href="https://github.com/AADmitriy/Photo-Editor">Link to github source</a> -->
+                <div class="carousel-container">
+                    <div class="carousel-viewpoint">
+                        <div class="carousel-slide active" id="slide-1">
+                            <img class="slide__background" src="media/editor_site/editor_site_editor.webp">
+                            <img class="slide__image" src="media/editor_site/editor_site_editor.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-2">
+                            <img class="slide__background" src="media/editor_site/editor_site_editor2.webp">
+                            <img class="slide__image" src="media/editor_site/editor_site_editor2.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-3">
+                            <img class="slide__background" src="media/editor_site/editor_site_export_menu.webp">
+                            <img class="slide__image" src="media/editor_site/editor_site_export_menu.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-4">
+                            <img class="slide__background" src="media/editor_site/editor_site_projects.webp">
+                            <img class="slide__image" src="media/editor_site/editor_site_projects.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-5">
+                            <img class="slide__background" src="media/editor_site/editor_site_templates.webp">
+                            <img class="slide__image" src="media/editor_site/editor_site_templates.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-6">
+                            <img class="slide__background" src="media/editor_site/editor_site_favorites.webp">
+                            <img class="slide__image" src="media/editor_site/editor_site_favorites.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-7">
+                            <img class="slide__background" src="media/editor_site/editor_site_project_create.webp">
+                            <img class="slide__image" src="media/editor_site/editor_site_project_create.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-8">
+                            <img class="slide__background" src="media/editor_site/editor_site_project_preview.webp">
+                            <img class="slide__image" src="media/editor_site/editor_site_project_preview.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-9">
+                            <img class="slide__background" src="media/editor_site/editor_site_project_preview2.webp">
+                            <img class="slide__image" src="media/editor_site/editor_site_project_preview2.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-10">
+                            <img class="slide__background" src="media/editor_site/editor_site_profile.webp">
+                            <img class="slide__image" src="media/editor_site/editor_site_profile.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-11">
+                            <img class="slide__background" src="media/editor_site/editor_site_home_page1.webp">
+                            <img class="slide__image" src="media/editor_site/editor_site_home_page1.webp">
+                        </div>
+                        <div class="carousel-slide " id="slide-12">
+                            <img class="slide__background" src="media/editor_site/editor_site_home_page2.webp">
+                            <img class="slide__image" src="media/editor_site/editor_site_home_page2.webp">
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <a class="nav-dot active"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                        <a class="nav-dot"></a>
+                    </div>
+                    <div class="carousel-buttons">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/>
+                            </svg>
+                        </button>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="project__description">
+                    Vinci is a web-based graphic design editor similar to Photopea, which allows users to create, edit,
+                    and manage design projects.
+                    <br>
+                    Users of this site can:
+                    <ul class="site_features">
+                        <li>Use filters on images</li>
+                        <li>Draw using various drawing modes</li>
+                        <li>Draw shapes and textboxes on canvas using mouse</li>
+                        <li>Create an account to save their work on cloud</li>
+                        <li>Make their projects public</li>
+                        <li>Browse templates that were created by other users</li>
+                        <li>Share and download their work</li>
+                    </ul>
+                    <br>
+                    The project was carried out by four developers. My part of a job was:
+                    <ul class="site_features">
+                        <li>Developing main functionality of the editor page</li>
+                        <li>Fixing bugs in UI layout</li>
+                        <li>Making projects shareable by special links</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
     <footer class="footer">
         <div class="container">
             <p>
-                &copy; 2024 Created by me
+                &copy; 2026 Created by me
             </p>
         </div>
     </footer>
